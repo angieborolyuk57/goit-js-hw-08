@@ -1,4 +1,4 @@
-import throttle from 'lodash/throttle';
+import { throttle } from 'lodash.throttle';
 var throttle = require('lodash.throttle');
 
 const refs={
