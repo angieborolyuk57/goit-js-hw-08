@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+var throttle = require('lodash.throttle');
 
 const refs={
     email: document.querySelector('.email'),
@@ -28,7 +29,6 @@ function onTextInput(e) {
     const textInput = e.currentTarget.value;
 
     localStorage.setItem(STORAGE_KEY, textInput);
-
 }
 
 function populateTextArea() {
@@ -38,7 +38,6 @@ function populateTextArea() {
       console.log('Data is stored');
       refs.message.value = storedData;
       refs.email.value = storedData;
-    
 }
 }
 
