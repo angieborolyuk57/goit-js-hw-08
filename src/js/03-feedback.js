@@ -1,4 +1,6 @@
-import throttle from 'lodash/throttle';
+import { throttle } from 'lodash.throttle';
+var throttle = require('lodash.throttle');
+
 
 function loadFormState() {
     const storedState = localStorage.getItem("feedback-form-state");

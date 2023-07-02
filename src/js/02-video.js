@@ -1,5 +1,7 @@
 import Vimeo from '@vimeo/player';
 import { throttle } from 'lodash.throttle';
+var throttle = require('lodash.throttle');
+
 
 const playerElement = document.getElementById('vimeo-player');
 const player = new Vimeo(playerElement);
