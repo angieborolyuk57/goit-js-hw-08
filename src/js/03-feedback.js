@@ -32,7 +32,7 @@ function loadFormState() {
     localStorage.removeItem("feedback-form-state");
   }
   
-  const saveFormStateThrottled = _.throttle(saveFormState, 500);
+  const saveFormStateThrottled = throttle(saveFormState, 500);
   
   document.addEventListener("DOMContentLoaded", loadFormState);
   document.querySelector('.feedback-form').addEventListener("input", saveFormStateThrottled);
