@@ -42,7 +42,11 @@ function populateTextArea() {
   if (storedData) {
     console.log('Data is stored');
     const formData = storedData;
-    refs.email.value = formData.email;
-    refs.message.value = formData.message;
+    try {
+      refs.email.value = JSON.parse(formData.email);
+      refs.message.value = JSON.parse(formData.message);
+    } catch (error) {
+      console.error('Error parsing JSON data:', error);
+    }
   }
 }
